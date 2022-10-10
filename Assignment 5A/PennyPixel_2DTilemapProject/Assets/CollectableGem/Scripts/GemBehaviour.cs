@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Kyle Manning
+ * Assignment 5A - 2D game
+ * Handles gem behavior and increments player score
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
