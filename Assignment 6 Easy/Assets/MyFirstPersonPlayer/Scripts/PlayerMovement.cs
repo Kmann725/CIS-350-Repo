@@ -67,8 +67,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            AsyncOperation ao = SceneManager.UnloadSceneAsync(GameManager.Instance.currentLevelName);
-            AsyncOperation ao1 = SceneManager.LoadSceneAsync(GameManager.Instance.currentLevelName, LoadSceneMode.Additive); ;
+            GameManager.Instance.UnloadCurrentLevel();
+            GameManager.Instance.LoadLevel(GameManager.Instance.currentLevelName);
         }
 
         if (health <= 0)
