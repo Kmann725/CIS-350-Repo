@@ -27,7 +27,9 @@ public class EnemyAbstract : MonoBehaviour, EnemyInterface
     // Update is called once per frame
     protected virtual void Update()
     {
-        
+        Vector3 targetPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
     }
 
     public void TakeDamage(float amount)

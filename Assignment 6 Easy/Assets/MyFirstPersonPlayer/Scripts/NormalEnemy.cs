@@ -16,13 +16,6 @@ public class NormalEnemy : EnemyAbstract
         claw.attackDistance = 1.5f;
     }
 
-    protected override void Update()
-    {
-        Vector3 targetPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
