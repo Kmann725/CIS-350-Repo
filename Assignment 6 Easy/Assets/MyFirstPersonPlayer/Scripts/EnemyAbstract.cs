@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAbstract : MonoBehaviour, EnemyInterface
+public abstract class EnemyAbstract : MonoBehaviour, EnemyInterface
 {
     protected float health = 30f;
     protected float damage = 5f;
